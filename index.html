@@ -1,48 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SMP CITRA UTAMA | SIMS by SYNCODE.id</title>
-  <link rel="icon" href="https://lh3.googleusercontent.com/d/1wqqB6YUoxcmhODnPtD6hw3bOSjgA3H0Z" type="image/x-icon">
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
-      font-family: sans-serif;
-    }
-    .iframe-container {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-    }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-    .loader {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 1.2rem;
-      color: #666;
-      z-index: 10;
-    }
-  </style>
+  <title>SMP CITRA UTAMA | SIMS by SYNCODE.ID/title>
 </head>
 <body>
-  <div class="iframe-container">
-    <div class="loader" id="loader">Loading app...</div>
-    <iframe 
-      src="https://script.google.com/macros/s/AKfycbx3B6u9akMiL-GbgTZXPV_myJX-XsfgOXu4hYa7t5Blu3Aj53pC37Jfg3H96rWrYqUk7Q/exec" 
-      title="SIMS by SYNCODE.ID"
-      onload="document.getElementById('loader').style.display='none';"
-      allowfullscreen>
-    </iframe>
-  </div>
+  <iframe 
+    src="https://script.google.com/macros/s/AKfycbx3B6u9akMiL-GbgTZXPV_myJX-XsfgOXu4hYa7t5Blu3Aj53pC37Jfg3H96rWrYqUk7Q/exec"
+    width="100%"
+    height="100%"
+    allowfullscreen="true"
+    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none;">
+  </iframe>
+
+  <script>
+    window.onload = function() {
+      document.querySelector('iframe')
+        .requestFullscreen()
+        .catch((err) => {
+          console.error('Error attempting to enable full-screen mode:', err.message);
+        });
+    };
+  </script>
 </body>
 </html>
